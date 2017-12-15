@@ -1,0 +1,1860 @@
+/*
+= List Items
+= Links
+= Layout
+
+= Table styles
+= Tabs styling
+= Message styling
+= #side-col
+= #aside
+= Stretchy & Reuseable .aside
+= admin-rounded-box
+= Content Type styling
+= tables - mailshot & user sets
+
+= jquery ui tabs
+= node form
+= user login
+= autocomplete
+= datepicker themeing
+= Revisioning
+*/
+
+html {
+    /*font: 62.5%/18px Verdana, Geneva, sans-serif*/
+    font: 75%/18px Verdana, Geneva, sans-serif /*amended this as the textsize module makes it super small otherwise*/}
+    
+html#pageEmpty body {
+    padding: 0;}
+    
+.clearboth {
+    clear: both;}
+
+body { /* Re-set Global font size i.e 1.2em = 12px */
+    padding: 0 15px;
+    font-size: 1.2em;
+    color: #686868;
+    font-size: 100% !important; /*had to add this because of the textsize module*/
+    word-wrap: break-word
+    }
+
+h1, h2, h3, h4, h5, h6 {
+    padding:0;
+    margin:12px 0 }
+
+h1 { /* Set font size i.e 1.333em = 146x if global font size is 1.2em */
+    font-size: 1.333em;}
+
+.wrapper .main-col h1 {
+	background:transparent url(images/bullet-circle.gif) no-repeat scroll 0 2px;
+    font-size:1.1em;
+    padding-left:20px;
+    margin-bottom:18px;
+    clear: left; /* using both breaks the layout when using the right sidebar */}
+
+h2 {
+	font-size: 1.1em;
+    color:#4f8c63 }
+    
+h3, h4, h5, h6 {
+    font-size: 1em }
+    
+p { /* margin-bottom should match global line-height */
+    padding: 0;
+    margin: 18px 0;
+    vertical-align: baseline;}
+    
+img {
+    border: none }
+    
+address { 
+    font-style: normal; } 
+    
+acronym, abbr {} 
+
+label { /* IE6/7 defaults the legend to blue */
+    color:#686868 } 
+   
+input:hover {
+    cursor: pointer;}
+    
+    input.form-text:hover,
+    input.form-autocomplete:hover {
+        cursor: text;}
+
+/*
+List Items
+----------
+*/
+ul {
+    list-style: none }
+    
+li {
+    padding:0;
+    margin: 6px 0 }
+    
+ul, ol {
+    padding:0;
+    margin: 18px; }
+
+ul li {    
+	 background: url(images/bullet.gif) no-repeat 0 0.7em /*0 60% no-repeat*/;
+    padding: 0 0 0 8px;}
+    
+.item-list ul li {
+    background: url(images/bullet.gif) no-repeat 0 0.7em /*0 60% no-repeat*/;
+    list-style-type: none;
+    padding: 0 0 0 15px;
+    margin: 0;
+    line-height: 30px; }   
+
+ul.tabs li {
+    /* background: url(images/bullet.gif) 0 60% no-repeat; */
+    background: none;
+    padding-left: 8px;
+	line-height: 1.8em; }   
+
+ol li {
+    list-style-position: inside;
+    text-indent:0  }
+    
+dl {
+    margin:0 0 0 18px }
+
+dt {
+    font-weight:bold;
+    padding-left: 10px }
+    
+dd {
+    margin-bottom:10px;
+    margin-left: 10px }
+
+/*
+Links
+-----
+*/
+a {
+    color: #4f8c63;
+    text-decoration: underline }
+	
+a:visited {
+	color: #4f8c63}
+
+a:hover {
+    text-decoration: none }    
+    
+/* Firefox Dotted Outline Fix */
+a:active { 
+	outline: none; }
+	
+/* Firefox Dotted Outline Fix */
+a:focus { 
+	-moz-outline-style: none;}       
+
+/*
+Layout
+------
+*/
+body{
+	margin:0;}
+	
+#container {
+    float: left;
+    width: 100%;
+    display: block;
+    text-align: left;}
+	
+#header {
+	/* float:left; */
+	margin-bottom:25px;
+	width:100%;
+	height:40px; }
+
+#logo img {
+margin-top: 9px;
+}
+  
+  
+	#header p {
+		margin:0}
+			
+	#user-welcome {
+		float: right;
+		margin-top: 2px;
+		font-size: 0.9em;
+		font-weight: normal; }
+		
+		.need-help a {
+		  background:transparent url(images/bttn_need_help.gif) no-repeat scroll 0 0;
+      display:block;
+      height:29px;
+      text-indent:-99999px;
+      width:88px;}
+		  
+		  .need-help a:hover {
+		    background-position: 0 -29px;}
+			
+		#header strong {
+			font-size: 1.6em;
+			font-weight: bold}
+				
+			#header a {
+				text-decoration: none }
+		
+		#site-name-container {
+			float: left;
+			margin-top: 23px;
+    }
+			
+		#site-name {
+			font-size: 0.9em;
+			font-weight: normal; }
+		
+		/* =breadcrumbs */
+		#breadcrumbs {
+		  background: transparent url(images/breadcrumb-left-bg.gif) top left no-repeat;
+		  height: 33px;
+		  padding-left: 5px;
+		  margin: 3px 0 20px 215px;}
+				
+				#breadcrumbs span.crumb {				
+					float:left;
+					padding:0 20px 0 10px;
+					background: #f2f2f2 url(images/breadcrumb-separator-bg.gif) top right no-repeat;
+					line-height: 33px}
+					
+					#breadcrumbs span.crumb a {
+					   color: #686868;
+					   text-decoration: none;}
+					
+					#breadcrumbs span.current {
+					   background: #f2f2f2 url(images/breadcrumb-right-bg.gif) top right no-repeat }
+
+.wrapper {
+	/* float:left; */
+	margin-bottom:14px;
+	margin-left: 0;
+	width:100%;}
+	/* I dont know why 5% works here, thinkit should be 25% but that puts that vertical bar
+	 * half way across the screen
+	 */
+		
+	.main-col-container {
+		float: right;
+		position: relative;
+		width: 100%;
+		margin-left: -240px;}
+
+	.main-col {
+		margin-left: 215px;}
+		
+		.wrapper .main-col-container .main-col {
+		  min-width:762px; /* suits 1024 */
+		  zoom: 1;}
+		
+		.main-col li {
+			line-height:30px;
+			margin:0;
+			padding: 0 0 0 15px;
+			list-style-image: none;
+			list-style-type: none; }	
+			
+		.main-col ol li {
+			list-style-type: decimal;}
+	
+	/* two-sidebars */		
+  .two-sidebars .wrapper .main-col-container .main-col {
+    margin-right: 289px; /* to fit in the .aside if using the right column */}
+    
+  .two-sidebars .wrapper .aside {
+    float: right;}
+    
+  .two-sidebars .wrapper .main-col-container .main-col {
+    min-width:474px; /* suits 1024 */}
+
+#footer {
+	border-top:4px solid #4f8c63;
+	clear: both}
+	
+	#footer p {
+	 font-size: 0.9em;
+	 margin: 10px 0;}
+
+/* 
+Table styles
+------------
+*/
+
+.main-col-container .main-col table {
+  /*width: 100%; commenting out becoz it was breaking the wysiwyg, if need to add back in, must be more specific?*/}
+
+table.views-table {
+  width: 100%;}
+
+tr {
+	height: auto;
+	/* height: 2.5em; */
+}
+
+tr.odd {
+	background: #f2f2f2;
+}
+
+tr.even {
+	background: #e8e8e8;}
+
+tr:hover {
+	background: #d6d6d6;}
+
+/* had to do it this way for ie */
+tr.odd td.active {
+    background-color: #F2F2F2;}
+
+tr.even td.active {
+    background-color: #E8E8E8;}
+ 
+tr.odd:hover td.active,   
+tr.even:hover td.active {  
+    background: #d6d6d6;}
+/* end: for ie */
+
+thead tr:hover,
+tr.region {
+    background: none;}
+
+th, td {
+	padding: 10px 15px;}
+
+thead th {
+	border-bottom: 2px solid #CCCCCC;}
+	
+th a,
+th a:visited {
+    color: #686868;
+    text-decoration: none;}
+    
+th a img {
+    padding-left: 7px;}
+
+/*
+Tabs styling
+------------
+*/
+ul.primary {
+    border-bottom: 1px solid #CCCCCC;
+    padding: 0;
+    margin: 20px 0 20px 5px;}
+    
+    ul.tabs li {
+        padding-left: 10px;}
+        
+    ul.primary li a {
+        background-color: #fafafa;
+        border-top: 1px solid #e5e5e5;
+        border-right: 1px solid #e5e5e5;
+        border-left: 1px solid #e5e5e5;
+        color: #686868;
+        margin: 0;
+        padding: 4px 10px;}
+        
+        ul.primary li a:hover {
+            background-color: #EEEEEE;}
+        
+    ul.primary li.active a {
+        background-color: #fafafa;
+        border-top: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+        border-left: 1px solid #CCCCCC;
+        font-weight: bold;}
+            
+        ul.primary li.active a:hover {
+            border-bottom: 1px solid #ffffff;}
+            
+div.tabs {
+    /*background: url(images/tabs-bg-tile.gif) repeat-x 0 0;*/
+    height: 27px;
+    width: auto;
+    color: #686868;
+    display: block;
+    padding:0 0 0 10px;
+    margin-bottom:15px;}
+    
+    .tabs-line {
+      background: url(images/tabs-bg-tile.gif) repeat-x 0 0;
+      height: 27px;
+      display:inline-block;}
+    
+    .tab-container {
+        float:left;
+        margin:0 15px 0 0;}
+    
+    .tab-left {
+        width: 7px;
+        height: 27px;
+        background: url(images/tabs-active-left.gif) no-repeat 0 0;
+        display:block;
+        float:left;}
+        
+    .tab-right {
+        width: 7px;
+        height: 27px;
+        background: url(images/tabs-active-right.gif) no-repeat 0 0;
+        display:block;
+        float:left;}
+    
+    .tabs span a {
+        color: #686868;
+        text-decoration: none;
+        font-size: 0.9em;
+        height:26px;
+        padding:1px 2px 0;
+        display:block;
+        float: left;}
+        
+        .tabs span a:hover {
+            color: #4f8c63;}
+    
+    span.active a {
+        background: transparent url(images/tabs-active-point.gif) no-repeat bottom center;
+        font-weight: bold;
+        color: #686868;}
+        
+        span.active a:hover {
+            color: #686868;}
+
+/* 
+Message styling
+---------------
+*/
+.messages,
+.user-sets-notice {
+    border: 1px solid #CCCCCC;
+    background: #EEEEEE;
+    padding: 10px;
+    color: #686868;
+    margin: 20px 0;}
+    
+    .messages ul {
+        margin: 0;}
+        
+        .messages ul li {
+            margin: 0;}
+            
+    div.status,
+    div.user-sets-notice {
+        border: 1px solid #00B609;
+        background: #D6F2D7;}
+    
+	    div.status ul li,
+	    div.user-sets-notice ul li {
+		   background: transparent url(images/icon-tick.gif) no-repeat scroll 0px 7px;
+		   padding-left: 20px;}
+
+    div.error {
+        border: 1px solid #DD7777;
+        background: #f9d3d3;
+        padding: 10px;}
+        
+        div.error ul li {
+            background: #f9d3d3 url(images/icon-exclamation-red.gif) no-repeat scroll 0px 8px;
+            padding-left: 20px;}
+        
+	div.warning, tr.warning {
+		background:#FFFFDD none repeat scroll 0 0;
+		color:#222200;
+		padding: 10px;}
+	
+		div.warning {
+		  border:1px solid #F0C020;
+		  margin: 20px 0;}
+        
+/* 
+= #side-col
+-----------
+*/
+#side-col {
+    float: left;
+    position: relative;
+    /*width: 230px;*/}
+    
+    #admin-menu-container {
+        width: 195px;
+        overflow: hidden;
+        float: left;}
+    
+	.admin-menu {
+	   background: transparent url(images/side-col-tile-left.gif) repeat-y left top;}
+	
+	    .admin-menu-top {
+	        background: transparent url(images/side-col-top-left.gif) no-repeat left top;
+	        height: 3px;}
+	        
+	        .admin-menu-top span.admin-menu-top-span {
+	           background: transparent url(images/side-col-top-right.gif) no-repeat right top;
+	           height: 3px;
+	           display:block;}
+	        
+	    .admin-menu-content {
+	       background: transparent url(images/side-col-tile-right.gif) repeat-y right top;}
+	       
+        .admin-menu-bottom {
+            background: transparent url(images/side-col-bottom-left.gif) no-repeat left bottom;
+            width: 195px;}
+            
+            .admin-menu-bottom span.admin-menu-bottom-span {
+               background: transparent url(images/side-col-bottom-right.gif) no-repeat right bottom;
+               display: block;
+               width: 195px;}
+               
+    .admin-menu h2 {
+        padding-left: 11px;}
+     
+    /* add the images to the menu toggle - these classes are added with js */           
+    .logged-in #side-col div.admin-menu-toggle.expand,
+    .logged-in #side-col div.admin-menu-toggle.collapse {
+        height: 38px;
+        width: 15px;
+        float: left;
+        text-indent: -9999em;}
+        
+        .logged-in #side-col div.admin-menu-toggle.expand:hover,
+        .logged-in #side-col div.admin-menu-toggle.collapse:hover {
+            cursor: pointer;
+            background-position: -15px 9px; /* sends the image 15px to the left to reveal hover version */}
+    
+    .logged-in #side-col div.admin-menu-toggle.expand {
+        background:transparent url(images/side-col-toggle-in.gif) no-repeat 0 9px;}
+        
+        .logged-in #side-col div.admin-menu-toggle.collapse {
+            background:transparent url(images/side-col-toggle-out.gif) no-repeat 0 9px;}
+    
+    #side-col li.expanded li.last {
+    padding-bottom: 10px;}
+    
+    #side-col a {
+        color: #686868;
+        text-decoration: none;}
+        
+    #side-col li,
+    #side-col li.expand {
+        list-style-image: none;
+        list-style-type: none;
+        background: none;
+        padding: 0;
+        margin: 0;}
+        
+        #side-col li a {
+            display: block;
+            overflow: hidden;
+            font-size: 0.8em;
+            padding: 5px 10px 0 21px;
+            margin: 5px 0;
+            height: 16px;
+            background: transparent url(images/side-col-li-li-bullet.gif) no-repeat 13px 12px;}
+            
+            #side-col li a:hover,
+            #side-col li a.active {
+                color: #4f8c63;}
+                
+                #side-col li a.active {
+                    font-weight: bold;}
+                
+                #side-col ul.menu li ul.menu li ul.menu li ul.menu {
+                    padding: 0 0 0 15px;}
+                                
+        #side-col ul.menu {
+            padding: 0;
+            margin: 0;}
+        
+#side-col li a.menuSDE,
+#side-col li a.menuAdmin,
+#side-col li a.menuCreateContent,
+#side-col li a.menuContentManagement,
+#side-col li a.menuMailShot,
+#side-col li a.menuCalculators,
+#side-col li a.menuSiteBuilding,
+#side-col li a.menuSiteConfiguration,
+#side-col li a.menuUserManagement,
+#side-col li a.menuReports,
+#side-col li a.menuPWLite,
+#side-col li a.menuSearch,
+#side-col li a.menuHelp,
+#side-col li a.menuPortal
+{
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 9px 0 7px 37px;
+    margin:0 1px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+    
+    #side-col li.expanded ul li.last a {
+        border-bottom: 0 none;}
+    
+#side-col li a.menuSDE:hover,
+#side-col li a.menuCreateContent:hover,
+#side-col li a.menuUserManagement:hover,
+#side-col li a.menuMailShot:hover,
+#side-col li a.menuCalculators:hover,
+#side-col li a.menuSiteBuilding:hover,
+#side-col li a.menuContentManagement:hover,
+#side-col li a.menuSiteConfiguration:hover,
+#side-col li a.menuReports:hover,
+#side-col li a.menuPWLite:hover,
+#side-col li a.menuSearch:hover,
+#side-col li a.menuHelp:hover,
+#side-col li .active-trail a.menuCreateContent,
+#side-col li .active-trail a.menuSDE,
+#side-col li .active-trail a.menuUserManagement,
+#side-col li .active-trail a.menuMailShot,
+#side-col li .active-trail a.menuCalculators,
+#side-col li .active-trail a.menuSiteBuilding,
+#side-col li .active-trail a.menuContentManagement,
+#side-col li .active-trail a.menuSiteConfiguration,
+#side-col li .active-trail a.menuReports,
+#side-col li .active-trail a.menuPWLite,
+#side-col li .active-trail a.menuSearch,
+#side-col li .active-trail a.menuHelp {
+    background-position: 10px -24px;
+    color: #686868;}
+
+#side-col li .active-trail a.menuPWLite {
+    background-position: 10px -18px;
+    color: #686868;} 
+
+    
+#side-col li a.menuAdmin {
+    border-top: 0 none;
+    border-bottom: 4px solid #4f8c63;
+    padding: 8px 0 8px 37px;
+    margin: 0;
+    background: url(images/side-col-li-Admin.png) no-repeat 10px 9px;}
+    
+    #side-col li a.menuAdmin:hover,
+    #side-col li .active-trail a.menuAdmin,
+    #side-col li a.menuAdmin.active {
+        color: #686868;}
+        
+        
+#side-col li a.menuSDE {
+    background: url(images/side-col-li-SDE.png) no-repeat 10px 11px;}
+
+#side-col li a.menuCreateContent {
+    border-top: 0 none;
+    background: url(images/side-col-li-CreateContent.png) no-repeat 10px 11px;}
+       
+#side-col li a.menuContentManagement {
+    background: url(images/side-col-li-ContentManagement.png) no-repeat 10px 11px;}
+
+#side-col li a.menuMailShot {
+    background: url(images/side-col-li-MailShot.png) no-repeat 10px 11px;}
+    
+#side-col li a.menuCalculators {
+    background: url(images/side-col-li-Calculators.gif) no-repeat 10px 11px;}
+    
+#side-col li a.menuSiteBuilding {
+    background: url(images/side-col-li-SiteBuilding.png) no-repeat 10px 11px;}
+
+#side-col li a.menuSiteConfiguration {
+    background: url(images/side-col-li-SiteConfiguration.png) no-repeat 10px 11px;}
+
+#side-col li a.menuUserManagement {
+    background: url(images/side-col-li-UserManagement.png) no-repeat 10px 11px;}
+    
+#side-col li a.menuReports {
+    background: url(images/side-col-li-Reports.png) no-repeat 10px 11px;}
+    
+#side-col li a.menuPWLite {
+    background: url(images/pw-foundation-icon.gif) no-repeat 10px 11px;}
+
+#side-col li a.menuPWLite:hover {
+    background: url(images/pw-foundation-icon.gif) no-repeat 10px -18px;}
+    
+#side-col li a.menuSearch {
+    background: url(images/side-col-li-Search.png) no-repeat 10px 11px;}
+
+#side-col li a.menuHelp {
+    border-bottom: 0 none;
+    background: url(images/side-col-li-Help.png) no-repeat 10px 11px;}
+        
+/*
+= #aside
+--------
+*/
+#aside {
+    float: left;
+    background:transparent url(images/aside-box-top.gif) no-repeat scroll 0 0;
+    padding-top:3px;
+    margin-bottom: 15px;}
+    
+    #aside h3 {
+        color: #4f8c63;
+        /*width: 345px;*/
+        display: block;
+        border-bottom: 3px solid #adadad;
+        padding: 0  0 10px 15px;
+        margin: 0 2px;}
+        
+    #aside .aside-tile {
+        background:transparent url(images/aside-box-tile.gif) repeat-y scroll 0 0;
+        width:364px;
+        padding: 12px 0 0;}
+        
+    #aside .aside-bottom {
+        background:transparent url(images/aside-box-bottom.gif) no-repeat scroll left bottom;
+        height:100%;
+        padding-bottom:10px;
+        width:364px;}
+        
+    #aside .aside-content {
+        padding: 0 17px;}
+        
+    #aside .description {
+        color: #686868;
+        font-weight: normal;}
+        
+/*
+Stretchy & Reuseable .aside
+---------------------------
+*/
+
+/* Layout */
+.aside {
+    float: left;
+    background: transparent url(images/aside-box-tile-left.gif) repeat-y scroll left top;
+    margin-bottom:15px;}
+    
+    .aside-top {
+        background:transparent url(images/aside-box-top-left.gif) no-repeat scroll left top;
+        height:3px;}
+        
+        .aside-top span { 
+            background:transparent url(images/aside-box-top-right.gif) no-repeat scroll right top;
+            display:block;
+            height:3px;}
+            
+    .aside-content {
+        background:transparent url(images/aside-box-tile-right.gif) repeat-y scroll right top;
+        padding: 9px 0 0;}
+        
+        .aside-bottom {
+            background:transparent url(images/aside-box-bottom-left.gif) no-repeat scroll left bottom;
+            padding-bottom:10px;
+            height: 100%;}
+            
+           .aside.width-278 .aside-bottom {
+            background:transparent url(images/aside-box-bottom-278.gif) no-repeat scroll left bottom;}
+            
+            .aside-bottom span {
+            background:transparent url(images/aside-box-bottom-right.gif) no-repeat scroll right bottom;
+            display:block;}
+            
+                #mailshot-container .aside-bottom span {
+                    background: none;}
+        
+/* Styles */  
+.aside input#edit-submit,
+.aside input#edit-preview,
+.aside input#edit-delete,
+.aside input#edit-full-view {
+    margin: 12px 0 0 12px;}
+  
+.aside h3,
+.aside h2,
+.admin-rounded-box h3 {
+    color: #4f8c63;
+    display: block;
+    border-bottom: 3px solid #adadad;
+    padding: 0  0 10px 10px;
+    margin: 0 2px;}
+    
+    .admin-rounded-box h3 {
+        margin: 0;}
+    
+.aside fieldset {
+    margin:12px 2px 0;
+    padding:0 10px 12px;
+    border: 0 none;
+    background:transparent url(images/aside-fieldset-tile.gif) repeat-x scroll left bottom;} 
+    
+    .aside fieldset legend a {
+        color: #686868;
+        font-weight: bold;
+        text-decoration: none;}
+        
+        legend {
+            color: #686868;
+            padding: 0;
+            margin: 0;}
+        
+        legend.collapse-processed {
+            padding: 0;
+            color: #686868;}
+        
+        html.js .aside fieldset.collapsible legend a {
+            background:transparent url(images/bullet-toggle.gif) no-repeat scroll 0 0.2em;}
+            
+        html.js .aside fieldset.collapsible.collapsed legend a {
+            background:transparent url(images/bullet.gif) no-repeat scroll 0 0.2em;} 
+            
+.aside.width-278 .form-item input,
+.aside.width-278 .form-item textarea {
+    width: 98%;}  
+    
+    .aside.width-278 .form-item input.form-checkbox,
+    .aside.width-278 .form-item input.form-radio {
+        width: auto;}  
+        
+/*
+= admin-rounded-box
+-------------------
+*/
+.admin-rounded-box {
+	float: left;
+    background: transparent url(images/box-tile-left.gif) repeat-y scroll left top;
+    margin-bottom:15px;}
+    
+    .admin-rounded-box-top {
+        background:transparent url(images/box-top-left.gif) no-repeat scroll left top;
+        height:4px;}
+        
+            .admin-rounded-box-top span { 
+	            background:transparent url(images/box-top-right.gif) no-repeat scroll right top;
+	            display:block;
+	            height:4px;}
+	            
+    .admin-rounded-box-content {
+        background:transparent url(images/box-tile-right.gif) repeat-y scroll right top;
+        padding: 8px 1px 0;}
+        
+    .admin-box-content {
+      padding: 0 10px;}
+        
+    .admin-rounded-box-bottom {
+        background:transparent url(images/box-bottom-left.gif) no-repeat scroll left bottom;
+        display:block;}
+            
+            .admin-rounded-box-bottom span {
+                background:transparent url(images/box-bottom-right.gif) no-repeat scroll right bottom;
+                display:block;
+                height:4px;}
+    
+    .admin-rounded-box-grey-bottom {
+        background:transparent url(images/box-bottom-grey-left.gif) no-repeat scroll left bottom;
+        display:block;}
+            
+            .admin-rounded-box-grey-bottom span {
+                background:transparent url(images/box-bottom-grey-right.gif) no-repeat scroll right bottom;
+                display:block;
+                height:4px;}  
+        
+/* 
+Content Type styling
+--------------------
+*/    
+#col-left,
+#col-middle,
+#col-right {
+    float: left;}
+    
+        html.js #aside fieldset {
+            padding: 0;
+            margin: 0 0 15px 0;
+            height: auto;
+            color: #686868;
+            font-weight: normal;}
+            
+            html.js #aside fieldset.collapsed legend,
+            html.js #aside fieldset.collapsible legend {
+                padding: 0;
+                margin-left: -11px;}
+            
+                html.js #aside fieldset.collapsible.collapsed legend a,
+                html.js #aside fieldset.collapsible legend a,
+                html.js #aside #apply-filters-container fieldset.collapsible fieldset.collapsed legend a {
+                    color: #686868;
+                    font-weight: bold;
+                    text-decoration: none;
+                    background: transparent url(images/bullet.gif) no-repeat 0 .2em;}
+                    
+                    html.js #aside fieldset.collapsible legend a,
+                    html.js #aside #apply-filters-container fieldset.collapsible fieldset legend a {
+                        background: transparent url(images/bullet-toggle.gif) no-repeat 0 .2em;}
+    
+        div.fieldset-wrapper label {
+            color: #4f8c63;
+            font-weight: bold;
+            font-size: 0.8em;}
+            
+            div.fieldset-wrapper .form-checkboxes label {
+            color: #686868;
+            font-weight: normal;
+            font-size: 1em;}
+            
+            #aside .form-textarea,
+            #aside input.form-text,
+            .resizable-textarea {
+                /*width:325px;*/
+                width: 98%}
+
+            .resizable-textarea textarea {
+                height: 30px;}
+
+            html.js fieldset.collapsible .fieldset-wrapper {
+                overflow: hidden !important;}
+            
+            div.fieldset-wrapper div.form-radios label {
+                color: #686868;}
+            
+            .quick-edit div.fieldset-wrapper select {
+                width: 100%; /* only set for quick edit box */}
+            
+.admin-hide {
+    display: none;}
+
+div.width-650 {
+    width: 650px !important;}
+
+div.width-500 {
+    width: 500px !important;}
+
+div.width-395 {
+    width: 395px !important;}
+    
+div.width-364 {
+    width: 364px !important;}
+    
+div.width-278 {
+    width: 278px !important;
+    /* need to reduce down to 260 of ie6 */}
+    
+fieldset {
+    border: 2px solid #f2f2f2;
+    margin:0 0 10px;
+    padding:5px;}
+
+.admin-border-box {
+    border: 5px solid #f2f2f2;
+    float: left;
+    padding: 15px;
+    margin-bottom: 40px;}
+           
+    .admin-border-box fieldset,
+    #aside fieldset {
+        border: 0 none;
+        padding: 0;
+        margin: 0;}
+        
+        .admin-border-box fieldset legend,
+        #aside fieldset {
+            font-size: 1em;
+            font-weight: bold;}
+                 
+    .admin-border-box h3,
+    .admin-border-box fieldset legend,
+    #aside fieldset {
+        color: #4f8c63;
+        margin:0 0 12px 0;
+        padding: 0;}
+        
+    #admin-mailshot-next label {
+        color: #4f8c63;}
+        
+    .admin-form-box-left {
+        margin-right: 10px;}
+        
+    .admin-form-box-right {
+        width: 300px;}
+                        
+    .admin-clearleft {
+        clear: left;
+        margin: 40px 0;}
+        
+    #admin-mailshot-next {
+        height: 20px;}
+        
+        #admin-mailshot-next label,
+        .admin-border-box .form-radios label {
+            font-size: 0.9em;}
+        
+        #admin-mailshot-next label {
+            font-weight: bold;
+            float: left;}
+            
+#admin-mailshot-next .form-radios .form-item,
+.admin-border-box .form-radios .form-item {
+    float: left;
+    margin: 0;}
+    
+#admin-mailshot-next .form-submit,
+.admin-border-box .form-submit {
+    float: left;
+    margin-right: 15px;}
+
+#admin-mailshot-next .form-radios label {
+    font-weight: normal;
+    color: #686868;
+    padding: 0 8px;}
+   
+.form-item {
+    margin: 1em 0;
+    clear: both; /* required for stopping float in staff profile content type */}
+         
+.admin-border-box .form-textarea,
+.admin-border-box input.form-text {
+    width: 385px;}
+    
+.admin-border-box select.form-select {
+    width:295px;}
+    
+.form-item label {
+    font-weight: bold;
+    font-size: 0.9em;}
+    
+    .marker, .form-required {
+        color:#FF0000;}
+    
+html.js fieldset.collapsed legend,
+html.js fieldset.collapsible.collapsed legend {
+    padding: 0;}    
+    
+html.js #aside #apply-filters-container fieldset.collapsible.collapsed legend a {
+    background:transparent url(images/bullet-orange.gif) no-repeat scroll 0 0.2em;}
+
+html.js #aside #apply-filters-container fieldset.collapsible legend a {
+    background:transparent url(images/bullet-orange-toggle.gif) no-repeat scroll 0 0.2em;}
+    
+/*
+= tables - mailshots & user sets
+--------------------------------
+*/
+th.progress,
+th.created,
+th.content,
+th.recipients,
+th.dup-clone,
+th.clone,
+th.preview,
+th.users,
+th.delete,
+th.dispatch,
+th.rename,
+th.used-by,
+td.rename,
+td.progress,
+td.created,
+td.content,
+td.recipients,
+td.users,
+td.delete,
+td.clone,
+td.preview,
+td.dispatch,
+td.in-use {
+text-align:center;}
+
+table td.delete a {
+  background:transparent url(images/icon-table-delete.png) no-repeat scroll center top;
+  display:block;
+  height:19px;
+  text-indent:-9999px;}
+
+table td.delete a:hover {
+  background-position:center -1px;
+  cursor:pointer;}
+
+table td.delete a.cannot-delete {
+  background:transparent url(images/icon-table-cannot-delete.png) no-repeat scroll center top;
+  display:block;
+  height:19px;
+  text-indent:-9999px;}
+
+table td.delete a.cannot-delete:hover {
+  cursor:default;}
+    
+/*
+= jquery ui tabs
+----------------
+*/
+.ui-tabs-hide {
+    display:none !important;}
+
+#tabs,
+#tabs-create-new-insert,
+.content-tabs,
+.users-tabs {
+	background:transparent url(images/tabs-bg-tile.gif) repeat-x scroll left bottom;
+	color:#686868;
+	display:inline-block;
+	height:31px;
+	margin: 10px 0 5px;
+	padding:0 0 0 10px;
+	width:auto;}
+	
+	#tabs ul,
+	#tabs-create-new-insert ul,
+	.content-tabs ul,
+  .users-tabs ul {
+	   margin: 0;}
+	   
+	   #tabs ul li,
+	   #tabs-create-new-insert ul li,
+	   .content-tabs ul li,
+     .users-tabs ul li {
+		     float:left;
+	       margin:0 15px 0 0;
+	       line-height: 29px;
+	       padding: 0;
+	       font-size: 1em;
+	       background: none;}
+	       
+	       #tabs ul li a,
+	       #tabs-create-new-insert ul li a,
+	       .content-tabs ul li a,
+         .users-tabs ul li a {
+	           text-decoration: none;}
+	       
+	       #tabs ul li.ui-tabs-selected,
+	       #tabs-create-new-insert ul li.ui-tabs-selected,
+	       .content-tabs ul li.ui-tabs-selected,
+	       .users-tabs ul li.ui-tabs-selected {
+	            background:transparent url(images/tabs-active-left.gif) no-repeat scroll left bottom;
+				      padding-left: 7px;
+				      height: 31px;}
+				
+		   .aside #tabs ul li.ui-tabs-selected,
+		   .aside #tabs-create-new-insert ul li.ui-tabs-selected {
+                background:transparent url(images/tabs-aside-active-left.gif) no-repeat scroll left bottom;}
+				
+				#tabs ul li.ui-tabs-selected a,
+				#tabs-create-new-insert ul li.ui-tabs-selected a,
+				.content-tabs ul li.ui-tabs-selected a,
+				.users-tabs ul li.ui-tabs-selected a {
+				   background:transparent url(images/tabs-active-right.gif) no-repeat scroll right bottom;
+					 padding-right: 7px;
+					 height: 31px;
+					 float:left;}
+					
+			     .aside #tabs ul li.ui-tabs-selected a,
+			     .aside #tabs-create-new-insert ul li.ui-tabs-selected a {
+                    background:transparent url(images/tabs-aside-active-right.gif) no-repeat scroll right bottom;}
+	       
+	       #tabs ul li a span,
+	       #tabs-create-new-insert ul li a span,
+	       .content-tabs ul li a span,
+	       .users-tabs ul li a span {
+	          color:#686868;
+    				display:block;
+    				float:left;
+    				font-size:0.9em;
+    				height:31px;
+    				margin:0;
+    				padding:0;
+    				text-decoration:none;}
+				
+				#tabs ul li a span:hover,
+				#tabs-create-new-insert ul li a span:hover {
+				    cursor: pointer;}	
+				    
+				    .content-tabs ul li a span:hover,
+            .users-tabs ul li a span:hover {
+                color: #4f8c63;}
+				    
+				    #tabs ul li.ui-tabs-selected a span:hover,
+				    #tabs-create-new-insert ul li.ui-tabs-selected a span:hover {
+				        cursor: text;}     
+	       
+	       #tabs ul li.ui-tabs-selected a span,
+	       #tabs-create-new-insert ul li.ui-tabs-selected a span,
+	       .content-tabs ul li.ui-tabs-selected a span,
+	       .users-tabs ul li.ui-tabs-selected a span {
+	           background: transparent url(images/tabs-active-point.gif) no-repeat scroll center bottom;
+			   color:#686868;
+               font-weight:bold;}
+               
+           .aside #tabs ul li.ui-tabs-selected a span,
+           .aside #tabs-create-new-insert ul li.ui-tabs-selected a span {
+               background: transparent url(images/tabs-aside-active-point.gif) no-repeat scroll center bottom;}
+
+.content-tabs,
+.users-tabs {
+  margin-bottom: 15px;}
+
+
+/* 
+= node form 
+-----------
+*/
+    /* float none as the box size wasn't correct in event & vacancies otherwise */
+.node-form .admin-rounded-box {
+    float: none;}
+
+.node-form #col-left {
+    width: 62%;;
+    margin-right: 10px;}
+
+	.node-form #col-left .form-region-main,
+	.node-form #col-left .form-region-footer {
+	    width: auto;
+	    float: none;
+	    clear: left;}
+
+.node-form .form-region-right {
+    width: auto;
+    float: none;}
+
+	    /* need to restrict width on input and dd as it overflows in the aside otherwise */
+	.node-form  .form-region-right fieldset.collapsible div.fieldset-wrapper fieldset.collapsible input.form-text,
+	.node-form  .form-region-right fieldset.collapsible div.fieldset-wrapper fieldset.collapsible div.fieldset-wrapper select {
+	    width: 220px;}	    
+	    
+	    /* need to restrict width as it overflows in the aside otherwise */
+	.node-form  .form-region-right .container-inline-date .form-item, .container-inline-date .form-item input {
+	    width:221px;}
+	    
+/*
+= user login
+------------
+*/
+#user-login-form {
+    text-align: left;
+    padding: 10px;}
+    
+#user-login-form .form-item {
+    margin: 0 0 10px;}
+    
+	#user-login-form .form-item label {
+	   margin: 0 0 3px;}
+	
+	#user-login-form .form-item input {
+	    width: 171px;}
+	    
+#user-login-form .item-list ul {
+    padding: 0;}
+    
+	#side-col #user-login-form .item-list ul li a {
+		background:transparent url(images/side-col-li-li-bullet.gif) no-repeat scroll 3px 12px;
+		padding:5px 0 0 11px;
+		line-height: 18px;}
+		
+/*
+= sitemap
+---------
+.site-map
+*/
+.site-map ul,
+.site-map ul.menu {
+    margin:0 0 0 19px;
+    padding:5px 0;}
+    
+    .site-map ul.menu li {
+        background:transparent url(images/sitemap_li.gif) no-repeat scroll left top;
+        border-left:1px solid black;
+        margin:0;
+        padding:0 0 5px 22px;}
+
+        .site-map ul.menu li.last {
+            background:transparent url(images/sitemap_li_last.gif) no-repeat scroll left top;
+            border:medium none;}
+            
+.main-col .site-map ul.menu li {
+    line-height: 18px;}
+    
+/*
+= autocomplete
+--------------
+*/
+#autocomplete {
+    background-color: #fefefe; /* add a background otherwise the background becomes transparent */}
+    
+/*
+= datepicker themeing
+---------------------
+*/
+.ui-datepicker-header select {
+    background: transparent;}
+
+.ui-datepicker-next,
+.ui-datepicker-next:hover,
+.ui-datepicker-prev,
+.ui-datepicker-prev:hover {
+	background-image: none;
+	background-color: transparent;}
+
+.ui-datepicker-prev label,
+.ui-datepicker-next a,
+.ui-datepicker-prev a,
+.ui-datepicker-prev a:hover {
+    background: transparent url(images/bullet-orange-prev.gif) no-repeat scroll 50% 50%;
+    border:1px solid #D3D3D3;
+    text-indent:-999999px;
+	display:block;
+	font-size:1em;
+	height:1.4em;
+	width:1.3em;}
+	
+	.ui-datepicker-next a,
+	.ui-datepicker-next a:hover {
+	   background: transparent url(images/bullet-orange.gif) no-repeat scroll 50% 50%;}
+	   
+table.ui-datepicker tr:hover{
+    background: transparent;}
+    
+table.ui-datepicker tbody td a:hover {
+    border: 1px solid #c0c0c0;}
+    
+    table.ui-datepicker tr.ui-datepicker-title-row td a {
+        font-weight: bold;
+        color: #686868;}
+    
+.ui-datepicker-status {
+    color: #686868;
+    font-size: 0.8em;
+    margin-top: 3px;}
+
+#ui-datepicker-div {
+  background: #ffffff;
+  border: 1px solid;}
+  
+/*=views links, need to set a width here to override the views css as it pushes the page out having horizontal scrolling*/
+div.view div.views-admin-links {
+    width: auto;}
+    
+/*
+= dashboard
+-----------
+*/
+.dashboard-rounded-box {
+  background:transparent url(images/dashboard-box-tile-left.gif) repeat-y scroll left top;
+  margin-bottom:15px;}
+  
+  .dashboard-rounded-box-top {
+    background:transparent url(images/dashboard-box-top-left.gif) no-repeat scroll left top;
+    height:4px;}
+    
+      .dashboard-rounded-box-top span.dashboard-rounded-box-top-right {
+        background:transparent url(images/dashboard-box-top-right.gif) no-repeat scroll right top;
+        display:block;
+        height:4px;}
+    
+  .dashboard-rounded-box-title {
+    background:#fafafa;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding:1px 10px 5px;}
+    
+    .dashboard-rounded-box-title strong {
+      color: #4f8c63;}
+      
+    .dashboard-rounded-box-title span {
+      text-align: right;}
+      
+      table#dashboard-content-table {
+        width: 100%;}
+        
+        table#dashboard-content-table tbody {
+          border: 0 none;}
+          
+        table#dashboard-content-table tr:hover {
+          background: transparent;}
+        
+        table#dashboard-content-table td {
+          padding: 0;}
+          
+          table#dashboard-content-table td.dashboard-table-links,
+          td.overview-td-right {
+            text-align: right;
+            min-width:120px;
+            padding-left:0;}
+            
+            table#dashboard-content-table td.dashboard-table-links a {
+              color: #686868;
+              text-decoration: none;
+              font-size: 0.9em;}
+              
+              table#dashboard-content-table td.dashboard-table-links a:hover {
+                text-decoration: underline;}
+        
+  .dashboard-rounded-box-content {
+    background:transparent url(images/dashboard-box-tile-left.gif) repeat-y scroll right top;
+    padding:8px 1px 8px;}
+    
+  .dashboard-rounded-box-bottom {
+    background:transparent url(images/dashboard-box-bottom-left.gif) no-repeat scroll left bottom;
+    display:block;
+    height: 5px;}
+    
+    .dashboard-rounded-box-bottom span {
+      background:transparent url(images/dashboard-box-bottom-right.gif) no-repeat scroll right bottom;
+      display:block;
+      height:5px;}
+      
+.dashboard-rounded-box table.views-table {
+  width: 100%;}
+  
+.dashboard-rounded-box .more-link {
+  text-align: left;
+  margin: 10px 0 0;}
+  
+  .dashboard-rounded-box .more-link a {
+    text-transform: capitalize;} 
+
+span.dashboard-small {
+  font-size: 0.8em;}
+  
+td.overview-td-right strong {
+  color: #ff5050;}
+  
+/*
+= Revisioning
+-------------
+*/
+.main-col-container .main-col table.sticky-enabled {
+  width: 100%;}
+
+tr.revision-pending {
+  background: #fff1c4;}
+
+tr.revision-current {
+  background: #d6f2d7;}
+  
+  td.status {
+    width: 50px;}
+    
+  td.title h2 {
+    display: inline;
+    font-weight: normal;
+    color: #686868;
+    font-size: 1.2em !important;}
+    
+  tr.revision-pending td.title,
+  tr.revision-current td.title,
+  tr.revision-draft td.title {
+    font-size: 0.8em;}
+    
+  td.date {
+    width: 150px;}
+      
+      
+/* Publications form */
+.node-type-pw-publications .attachments .form-item {
+    white-space:normal;  /*override system.css line 1424 white-space: no-wrap to fix broken layout issue */
+}
+
+/* All users view */
+#users-new-list-all-users-view-filter-fieldset  .views-exposed-widget{
+  width: 30ex;
+}
+
+#views-exposed-form-users-new-list-all-users-page #edit-submit-users-new-list {
+  margin-top: 0px;
+  margin-bottom: 1.5em;
+}
+
+.view-display-id-all_users_page  .bounced-email-flag {
+  font-size: 0.75em;
+  vertical-align: super;
+  color: red;
+}
+
+/* Permission filters */
+
+#filter-perms-admin-perm-filter {
+    position:relative
+}
+
+#filter-perms-admin-perm-filter .form-item {
+    clear: none;
+    float: left;
+    margin: 1em;
+    padding: 0;
+}
+
+#filter-perms-admin-perm-filter #edit-submit {
+    margin-top:0;
+    position:absolute;
+    bottom:1em
+}
+
+/* Portal admin application icon */
+
+#admin-menu-container .menuPortal {
+background: none;
+font-size: 1em;
+font-weight: bold;
+margin-left: 18px;
+padding-top: 0px;
+margin-top: 15px;
+}
+
+
+/* Portal admin logo */
+
+#admin-menu-container .menuPortal {
+  background: url(images/circular-map.png) no-repeat 10px 11px;
+}
+
+#admin-menu-container .menuPortal:hover,
+#side-col li .active-trail a.menuPortal {
+  background-position: 10px -17px;
+  color: #686868;
+}
+
+/************************************************************************
+* PracticeWEB brand refresh
+* Note: all instances of previous pweb orange above have been
+* changed to pweb green
+*************************************************************************/
+
+/* Sidebar icons chagned to Font Awesome icons */
+    #side-col li a {
+      border-top: 0 none !important;
+    }
+
+    #side-col li a:before {
+      font-family: FontAwesome !important;
+      font-size: 17px !important;
+      padding-right: 10px !important;
+    }
+
+    /* Reports icon: make slightly smaller so inline with other icons */
+    #side-col li a.menuReports:before {
+        font-size: 15px !important;
+    }
+
+    #side-col li a.active:before{
+        color: #7dc18e;
+    }
+
+    #side-col li a:hover:before {
+      color: #7dc18e !important;
+    }
+
+    .menuCreateContent:before {
+      content: "\f040";
+    }
+
+    .crumb .menuCreateContent:before {
+      content: "";
+    }
+
+    .menuContentManagement:before {
+        content: "\f07b";
+    }
+
+    .crumb .menuContentManagement:before {
+        content: "";
+    }
+
+    .menuSiteBuilding:before {
+        content: "\f0ad";
+    }
+
+    .crumb .menuSiteBuilding:before {
+        content: "";
+    }
+
+    .menuMailShot:before {
+        content: "\f0e0";
+    }
+
+    .crumb .menuMailShot:before {
+        content: "";
+    }
+
+    .menuSiteConfiguration:before {
+        content: "\f013";
+    }
+
+    .crumb .menuSiteConfiguration:before {
+        content: "";
+    }
+
+    .menuUserManagement:before {
+        content: "\f007";
+    }
+
+    .crumb .menuUserManagement:before {
+        content: "";
+    }
+
+    .menuReports:before {
+        content: "\f080";
+    }
+
+    .crumb .menuReports:before {
+        content: "";
+    }
+
+    .menuPWLite:before {
+        content: "\f0f7";
+    }
+
+    .crumb .menuPWLite:before {
+        content: "";
+    }
+
+    .menuPortal:before {
+        content: "\f14e";
+    }
+
+    .crumb .menuPortal:before {
+        content: "";
+    }
+
+    .menuHelp:before {
+        content: "\f059";
+    }
+
+    .crumb .menuHelp:before {
+        content: "";
+    }
+
+/* All heading and anchors colour changed to pweb green */
+    #pw-lite-settings-form .actions .form-submit {
+     background: #4f8c63;
+     border-bottom: 0px;
+    }
+
+    #pw-lite-settings-form .actions .form-submit:hover {
+        background: #5ea87a;
+    }
+
+/* Display tringle for child menu links */
+    #side-col li.leaf a {
+        background: transparent url(images/side-col-li-li-bullet.gif) no-repeat 13px 12px;
+    }
+
+/* Hide bkgrnd image for main menu links */
+    #side-col li a.menuCreateContent,
+    #side-col li a.menuContentManagement,
+    #side-col li a.menuSiteBuilding,
+    #side-col li a.menuMailShot,
+    #side-col li a.menuMailShot,
+    #side-col li a.menuSiteConfiguration,
+    #side-col li a.menuUserManagement,
+    #side-col li a.menuReports,
+    #side-col li a.menuPWLite,
+    #side-col li a.menuPortal,
+    #side-col li a.menuHelp  {
+        background: none;
+        padding-left: 11px;
+        line-height: 19px;
+        padding-top: 6px;
+    }
+
+    #side-col li a.menuPWLite:hover {
+        background: none;
+    }
+
+/* Change colour on feed icon at /admin/user/all */
+    .feed-icon a:before {
+        content: "CSV";
+        background: green;
+        padding: 1px 5px;
+        color: #fff;
+    }
+
+    .feed-icon a img {
+        display: none;
+    }
+
+/*----- Mailshot ----*/
+
+/* Browse mailshots */
+    .fa-sort-asc,
+    .fa-sort-desc {
+        position: relative;
+    }
+
+    .fa-sort-asc:before,
+    .fa-sort-desc:before  {
+        content: "\f0de";
+        position: relative;
+        position: absolute;
+        left: 10px;
+        font-size: 17px;
+        color: #4f8c63;
+    }
+
+    .fa-sort-asc:before {
+        top: -8px;
+    }
+
+    .fa-sort-desc:before {
+        top: -14px;
+    }
+
+/* Mailshots page: green pencil icon */
+    p.create-new {
+        background-image: none;
+        padding-left: 0px;
+    }
+
+    p.create-new a {
+        text-decoration: none;
+        color: #686868;
+    }
+
+    p.create-new a:before {
+        font-family: FontAwesome !important;
+        font-size: 17px !important;
+        padding-right: 10px !important;
+        content: "\f040";
+    }
+
+    p.create-new a:hover {
+        color: #7dc18e !important;
+    }
+
+/* Create mailshot modal window */
+    #apply-filters-container fieldset.collapsible.collapsed legend a, #apply-filters-container fieldset.collapsible legend a {
+        color: #4f8c63;
+        font-size: 0.9em;
+    }
+
+    #ui-mailshot-content-source #ui-from-website .date-month {
+        background-color: #4f8c63 !important;
+    }
+
+/* Container for PW Foundation latitude and longitude fieldset */
+  .well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+  }
+
+/* PW Foundation heading - make heading more obvious */
+  .pwf-admin-heading-note {
+    font-weight: bold;
+  }
+
+/******************************************************
+ * Create mailshot template change (node/add/pw-mailshots)
+ ******************************************************/
+
+/* Block components: acts as a namespace to protect changes
+ to other styles */
+.mailshot-block {
+  border: 2px solid #4f8c63;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* Remove images used for presentation */
+.mailshot-block .admin-rounded-box,
+.mailshot-block .admin-rounded-box-top,
+.mailshot-block .admin-rounded-box-top span,
+.mailshot-block .admin-rounded-box-content {
+  background: none;
+}
+
+/* Style field to look more modern */
+.mailshot-block #edit-title-wrapper input,
+.mailshot-block #edit-from-name-wrapper input,
+.mailshot-block #edit-reply-address-wrapper input,
+.mailshot-block #edit-subject-line-wrapper input,
+.mailshot-block select
+{
+  height: 30px;
+  border-radius: 2px;
+  border: 1px solid gray;
+  font-size: 13px;
+  text-indent: 10px;
+}
+
+/* Remove awkward space below 'Mailshot template' text */
+.mailshot-block #new-mailshot .admin-box-content {
+  padding-bottom: 0;
+}
+
+/* Hide description field */
+.mailshot-block .body-field-wrapper {
+  display: none;
+}
+
+/* Hide 'from address's (which is non-editable) */
+.mailshot-block #edit-from-name-wrapper + .form-item {
+  display: none;
+}
+
+/* Hide mailshot type (which is non-editable) */
+.mailshot-block #edit-mtid + .form-item {
+  display: none;
+}
+
+/******* Recipients and content collection *******/
+
+/* Remove images used for presentation */
+  .mailshot-block .admin-rounded-box-bottom {
+    background: none;
+  }
+  .mailshot-block .admin-rounded-box-bottom span {
+    background: none;
+    height: 0px;
+  }
+
+/* equalise left/right padding to match form fields above */
+.mailshot-block div#edit-rlid-wrapper,
+.mailshot-block div#edit-cid-wrapper
+{
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+/* Remove margin causing awkward space above */
+.mailshot-block div#edit-rlid-wrapper {
+  margin-top: 0px;
+}
+
+/* Recipients & Content collection fields width extended */
+.mailshot-block select
+{
+  width: 100%;
+  height: 35px;
+}
+
+/* submit button */
+.mailshot-block div#new-mailshot input.form-submit {
+    background-color: #4f8c63;
+    color: white;
+    padding: 10px;
+    width: 75%;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    border: 1px solid #686868;
+    border-radius: 5px;
+    transition: 0.1s;
+    -webkit-transition: 0.1s;
+}
+
+.mailshot-block div#new-mailshot input.form-submit:hover {
+    transition: 0.1s;
+    -webkit-transition: 0.1s;
+    background: #5EA97A;
+}
+
+/* change styling for delete button */
+.mailshot-block div#new-mailshot input#edit-delete {
+    background-color: #B52626;
+    margin-top: 15px;
+    width: 40%;
+    padding: 5px;
+    transition: 0.1s;
+    -webkit-transition: 0.1s;
+}
+
+.mailshot-block div#new-mailshot input#edit-delete:hover {
+    background-color: #F76464;
+    transition: 0.1s;
+    -webkit-transition: 0.1s;
+}

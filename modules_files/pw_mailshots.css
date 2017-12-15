@@ -1,0 +1,721 @@
+/*
+= standard layout
+-----------------
+*/
+
+.admin-section {
+    border: 1px solid #BBBBBB;
+    float: left;
+    margin:0 0 2.5%;}
+  
+.admin-section h3 {
+    text-align: center;
+    border-bottom: 1px solid #BBBBBB;
+    margin-bottom: 0px;
+    padding-bottom: 0.5em;}
+
+    #new-mailshot .teaser-checkbox {
+        display: none; /* used to remove teaser button of description field */}
+    
+#new-mailshot-quick-edit {
+    width: 100%;
+    margin: 0 2.5% 0;}
+
+#new-mailshot-form-buttons,
+#new-mailshot-render-form {
+    width: 100%;
+    clear: left;}
+
+/*
+= mailshot tables
+--------
+*/
+
+th.progress,
+th.created,
+th.content,
+th.recipients,
+th.preview,
+th.dispatch,
+th.delete,
+th.review-content,
+th.status,
+th.report,
+td.progress,
+td.created,
+td.content,
+td.recipients,
+td.preview,
+td.dispatch,
+td.delete,
+td.review-content,
+td.status,
+td.report {
+    text-align: center; /* used to center the table headings, text & icons */}
+    
+div.progress-1,
+div.progress-2,
+div.progress-3 {
+    font-weight: normal;}
+
+
+/*
+= mailshot type table
+--------
+*/
+
+table#mailshot-types th.mailshot-type {
+   
+
+}
+table#mailshot-types .mailshot-type-description {
+  width: 65%;
+}
+
+
+/*
+= preview popup
+---------------
+*/
+.ui-dialog-overlay {
+  background: #000;  
+  opacity: 0.4; -moz-opacity: 0.4; -khtml-opacity: 0.4; filter: alpha(opacity=40);}
+/* 
+    .ui-dialog-titlebar {
+        position: absolute;
+        right:5px;
+        top:0;
+        width:16px;
+        height: 16px;
+        z-index: 100 }
+        /*right:19px; top:9px;*/
+/* 
+            .ui-dialog-titlebar a:hover {
+                background-position: 0 -16px }  */
+
+#mailshot-frame-container {
+    background: #ffffff;}
+    
+    #mailshot-send-test {
+        border-bottom:1px solid #DDDDDD;}
+    
+    #popup-preview-form {
+    padding:5px 0 8px;
+    margin: 0 11px;}
+    
+    #popup-preview-form .form-item {
+        display: inline;
+        float: left;
+        margin: 0;}
+    
+input.form-autocomplete {
+    width: 260px;}
+    
+#edit-email-address-1-wrapper.form-item {
+    margin-right: 15px;}
+    
+
+
+/**
+ * A little basic datepicker themeing. copied from user-sets-admin.css
+ */
+
+#ui-datepicker-div {
+  background: white;
+  border: 1px solid;
+}
+
+#ui-datepicker-div .ui-datepicker-clear {
+  float: left;
+}
+
+#ui-datepicker-div .ui-datepicker-close {
+  float: right;
+}
+
+#ui-datepicker-div .ui-datepicker-links {
+  clear: both;
+  text-align: center;
+}
+
+#ui-datepicker-div .ui-datepicker-links div {
+  float: left;
+  width: 33%;
+}
+
+#ui-datepicker-div .ui-datepicker-header {
+  clear: both;
+}
+
+/* Mailshot preview stlyes */
+
+/* Preview Popup */
+/* 
+    .ui-dialog-titlebar {
+        position: absolute;
+        right:19px;
+        top:9px;
+        width:16px;
+        height: 16px;
+        z-index: 100 }
+
+.ui-dialog-titlebar a {
+    display:block;
+    height:0;
+    overflow:hidden;
+    padding-top:16px;
+    background: url(images/delete-icon.gif) no-repeat; 0 0;}  */
+    
+#popup-preview-form input#edit-submit-1 {
+    background: transparent url(images/send-bttn.jpg) no-repeat 0 0;
+    width: 49px;
+    height: 26px;
+    padding-top: 26px;
+    border: 0 none;
+    cursor: pointer;}
+    
+#mailshot-frame-container {
+    background: none;}
+    
+#mailshot-send-test { 
+    position:relative;       
+    background: #ffffff;
+    border-top: 2px solid #c4c4c4;
+    border-right: 2px solid #c4c4c4;
+    border-left: 2px solid #c4c4c4;
+    margin:0 11px;}
+                    
+        #mailshot-send-test fieldset {        
+            margin:0;
+            padding:10px}
+                    
+            #mailshot-send-test legend {        
+                font-weight: bold}
+                        
+            #mailshot-send-test label, #mailshot-send-test input {        
+                margin:0 5px}     
+        
+        #mailshot-frame {
+            border-right: 2px solid #c4c4c4;
+            border-left: 2px solid #c4c4c4;
+            height:570px;
+            margin:0 11px;
+            width:779px;}               
+                
+        #mailshot-preview-foot {
+            border-bottom: 2px solid #c4c4c4;
+            margin:0 11px;}
+
+#popup-top-bar {
+    background: #f4f4f4;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 5px 10px;}
+  
+    #popup-top-bar h2 {
+        color: #686868;
+        margin: 0;}
+        
+#popup-preview-form {
+    padding:5px 0 0;
+    margin: 0;}
+    
+    #popup-preview-form h3 {
+	    color: #f55900;
+	    font-size: 0.9em;
+	    margin: 0 0 0 6px;
+	    padding-left: 16px;
+	    background: transparent url(images/bullet-orange-toggle.gif) no-repeat 0 2px;}
+    
+    #popup-preview-form .form-item {
+        display: inline;
+        float: left;
+        margin: 0;}
+    
+input.form-autocomplete {
+    width: 260px;}
+    
+#edit-email-address-1-wrapper.form-item {
+    margin-right: 15px;}
+
+/*
+= jquery ui tabs
+----------------
+*/
+.ui-tabs-hide {
+    display:none !important;}
+
+
+
+/*
+ * hide "Split summary at cursor" button
+ */
+
+form#node-form #new-mailshot .teaser-button {
+	display: none;
+}
+
+/*
+New Mailshot
+------------
+*/
+#new-mailshot .teaser-checkbox {
+    display: none; /* used to remove teaser button of description field */}
+
+#col-right.mailshot-create-new {
+    width: 650px;}
+
+#new-mailshot {
+    width: 650px; /* this width is required to fit 1024 screen size without the menu collapsed */}
+          
+    div#new-mailshot.admin-rounded-box {
+        margin-bottom: 0;}
+    
+    #new-mailshot .admin-box-content {
+        padding-bottom: 10px;}
+    
+    #new-mailshot input,
+    #new-mailshot textarea {
+        width:100%;}
+
+    #new-mailshot input#edit-archive {
+      width: auto;
+    }
+       
+        #new-mailshot div#edit-subject-line-wrapper.form-item {
+            margin-bottom: 0; /* remove margin from the last field in the new mailshot box */}
+    
+#new-mailshot-publishing,
+#new-mailshot-quick-edit {
+    margin: 0 0 0 10px;}
+    
+    #new-mailshot-publishing {
+        margin-bottom: 10px;}
+    
+    #new-mailshot-quick-edit p {
+        padding: 0 11px;}
+        
+.admin-box-content {
+    padding: 0 10px;}
+ 
+
+#new-mailshot-form-buttons {
+     min-width: 500px; /* required for ie 7 */
+     float: left;
+     padding: 15px 0;}
+     
+    #new-mailshot-form-buttons .form-item {
+        display: inline;}
+     
+     .where-next-options,
+     .save-bttns {
+        float: left;}
+                
+        .where-next-options label,
+        .where-next-options .form-radios {
+            display: inline;}
+            
+    .where-next-options {
+        margin: 3px 0 0 10px;}
+        
+        .where-next-options label {
+            font-weight: bold;}
+
+/*
+Browse Table
+------------
+*/
+
+/* recipients icons */
+td.recipients a,
+td.recipients span {
+    color: #686868;
+    text-decoration:none;}
+
+table#unsent-mailshots td.recipients a.has-recipients,
+table#unsent-mailshots td.recipients span.has-recipients {
+    background:transparent url(images/icon-user-has.png) no-repeat scroll left top;
+    font-size:0.8em;
+    padding:0 0 5px 35px;}
+    
+table#unsent-mailshots td.recipients a.no-recipients,
+table#unsent-mailshots td.recipients span.no-recipients {
+    background:transparent url(images/icon-user-none.png) no-repeat scroll 0 0;
+    font-size:0.8em;
+    padding:0 0 5px 25px;}
+    
+    table#unsent-mailshots td.recipients a.has-recipients:hover,
+    table#unsent-mailshots td.recipients a.no-recipients:hover,
+    table#unsent-mailshots td.recipients span.has-recipients:hover,
+    table#unsent-mailshots td.recipients span.no-recipients:hover {
+        background-position: 0 -17px;}
+        
+table#dispatched-mailshots td.recipients a,
+table#dispatched-mailshots td.recipients span {
+    background:transparent url(images/icon-user-couple.png) no-repeat scroll 0 0;
+    font-size:0.8em;
+    padding:0 0 5px 25px;}
+    
+table#unsent-mailshots td.recipients span.has-recipients {
+    opacity: 0.5;
+}
+        
+/* content icons */
+table#unsent-mailshots a.has-content,
+table#unsent-mailshots a.no-content {
+    text-indent: -9999px;
+    display: block;
+    height: 19px;}
+    
+table#unsent-mailshots a.has-content {
+    background: url(images/icon-mailshot-has-content.png) no-repeat center top;}
+
+table#unsent-mailshots a.no-content {
+    background: url(images/icon-mailshot-no-content.png) no-repeat center top;}
+    
+    table#unsent-mailshots a.has-content:hover,
+    table#unsent-mailshots a.no-content:hover {
+        background-position: center -19px;}
+        
+/* preview icon */
+table#unsent-mailshots a.preview,
+table#dispatched-mailshots a.review {
+    text-indent: -9999px;
+    display: block;
+    background: url(images/icon-mailshot-preview.gif) no-repeat center top;
+    height: 18px;}
+    
+    table#unsent-mailshots a.preview:hover,
+    table#dispatched-mailshots a.review:hover {
+        background-position: center -19px;}
+  
+/* dispatch icon */      
+table#unsent-mailshots a.dispatch-ready,
+table#unsent-mailshots a.dispatch-not-ready {
+    text-indent: -9999px;
+    display: block;
+    height: 18px;}
+    
+table#unsent-mailshots a.dispatch-ready {
+    background: url(images/icon-mailshot-dispatch-ready.gif) no-repeat center top;}
+   
+    table#unsent-mailshots a.dispatch-ready:hover {
+        background-position: center -19px;}
+   
+table#unsent-mailshots a.dispatch-not-ready {
+    background: url(images/icon-mailshot-dispatch-not-ready.gif) no-repeat center top;}
+    
+    table#unsent-mailshots a.dispatch-not-ready:hover {
+        cursor: default; /* important - so that the user doesn't click it is a link */}
+        
+/* status icon */
+table#dispatched-mailshots td.status span {
+    text-indent: -9999px;
+    display: block;
+    height: 18px;}
+
+table#dispatched-mailshots td.status span.completed {
+    background: url(images/icon-dispatch-completed.png) no-repeat center top;}
+    
+table#dispatched-mailshots td.status span.active {
+    background: url(images/icon-dispatch-active.gif) no-repeat center top;}
+    
+table#dispatched-mailshots td.status span.scheduled {
+    background: url(images/icon-dispatch-scheduled.png) no-repeat center top;}
+        
+/* reports icon */
+table#dispatched-mailshots td.report a,
+table#dispatched-mailshots td.report span.report-not-ready {
+    text-indent: -9999px;
+    display: block;
+    height: 20px;}
+
+table#dispatched-mailshots td.report a {
+    background: url(images/icon-reports.png) no-repeat center top;}
+   
+    table#dispatched-mailshots td.report a:hover {
+        background-position: center -20px;}
+        
+table#dispatched-mailshots td.report span.report-not-ready {
+    background: url(images/icon-reports-not-ready.png) no-repeat center top;}
+
+/* clone icon */
+table#unsent-mailshots span.clone {
+    text-indent: -9999px;
+    display: block;
+    background: url(images/icon-clone.png) no-repeat center top;
+    height: 18px;}
+    
+    table#unsent-mailshots span.clone:hover {
+        cursor: pointer;
+        background-position: center -18px;}
+
+/* progress icons */
+table#unsent-mailshots div.progress-1,
+table#unsent-mailshots div.progress-2,
+table#unsent-mailshots div.progress-3 {
+    text-indent: -9999px;
+    display: block;
+    height: 18px;}
+    
+table#unsent-mailshots div.progress-1 {
+    background: url(images/icon-mailshot-progress-1.png) no-repeat center center;}
+    
+table#unsent-mailshots div.progress-2 {
+    background: url(images/icon-mailshot-progress-2.png) no-repeat center center;}
+
+table#unsent-mailshots div.progress-3 {
+    background: url(images/icon-mailshot-progress-3.png) no-repeat center center;}
+    
+/* create new mailshot link */
+p.create-new {
+    background: url(images/icon-pencil.jpg) no-repeat 0 0;
+    height:21px;
+    padding-top: 2px;
+    padding-left: 23px;}
+    
+    
+/*
+Preview Page
+------------
+*/
+/*overriding admin styles for the preview page*/
+#email-template-container table tbody {
+  border-top: 0 none;}
+  
+#email-template-container table tr,
+#email-template-container table th,
+#email-template-container table td {
+  padding: 0;
+  margin: 0;}
+
+  #email-template-container table tr:hover,
+  #email-template-container table td:hover {
+    background-color: transparent;}
+/*end overrides*/
+   
+#mailshot-send-test-container {
+    margin: 0;
+    width: 100%;
+    background: #ffffff;
+    /*text-align: center;*/
+    float: left;}    
+    
+#mailshot-send-preview {
+      margin: 10px 0 10px 35px;
+      width:785px;
+}
+
+#pageEmpty body {
+   text-align: center;
+}
+    
+.mailshot-frame-container span.active {
+  background:#FAFAFA url(images/tabs-active-point.gif) no-repeat scroll center bottom;
+  color:#686868;
+  font-weight:bold;}
+        
+.mailshot-frame-container .tabs span {
+   color:#686868;
+   display:block;
+   float:left;
+   font-size:0.9em;
+   height:26px;
+   padding:1px 2px 0;
+   margin: 0;
+   text-decoration:none;}
+
+.mailshot-frame-container {
+    background: none;
+    margin: 0 auto;
+    width: 820px;
+    text-align: left;}
+    
+    .mailshot-frame-height {
+    height: 100%;}
+    
+    table#emailWrapper tbody {
+        border-top: 0;}
+        
+    table#emailWrapper tr:hover {
+        background: none; /* fix bug from tables row hover colour change */}
+/*     
+    .ui-dialog-titlebar {
+        position: absolute;
+        right:19px;
+        top:9px;
+        width:16px;
+        height: 16px;
+        z-index: 100 }
+    
+        .ui-dialog-titlebar a {
+            display:block;
+            height:0;
+            overflow:hidden;
+            padding-top:16px;
+            background: url(images/icon-delete.gif) no-repeat 0 0;}  */
+
+#mailshot-send-test { 
+    position:relative;       
+    background: #ffffff;
+    border: 0 none;
+    margin:0; /* override module styles */}
+                    
+        #mailshot-send-test fieldset {        
+            margin:0;
+            padding:10px}
+                    
+            #mailshot-send-test legend {        
+                font-weight: bold}
+                        
+            #mailshot-send-test label, #mailshot-send-test input {        
+                margin:0 5px}     
+        
+        #mailshot-frame {
+            border: 0 none;
+            height:70%; /* 77% mine. suitable for browsers 1024 x 600 */
+            margin:0; /* override module styles */
+            width:820px; /* this width is required to stop vertical scrolling in ie */ }             
+                
+        #mailshot-preview-foot {
+            border-bottom: 2px solid #c4c4c4;
+            margin:0 11px;}
+
+#popup-top-bar {
+    background: #f4f4f4;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 5px 10px;}
+  
+#preview-top-bar h2 {
+    color: #686868;
+    margin: 0;
+    font-size: 1em;}
+        
+#popup-preview-form {
+    padding:5px 0 0;
+    margin: 0;
+    border: 1px solid red;}
+    
+    #popup-preview-form h3 {
+        color: #f55900;
+        font-size: 0.9em;
+        margin: 0 0 0 6px;
+        padding-left: 16px;
+        background: transparent url(images/bullet-orange-toggle.gif) no-repeat 0 2px;}
+    
+    #mailshot-send-preview .admin-rounded-box-content .form-item {
+        display: inline;
+        float: left;
+        margin: 0 5px;
+        clear: none; /*required to cancel out style from style.css */}
+        
+    #mailshot-send-preview .admin-rounded-box-content a,
+    #mailshot-send-preview .admin-rounded-box-content a:visited {
+        font-size: 0.9em;
+        margin-left:10px;
+        text-decoration: underline;
+        color: #686868;}    
+        
+    input.form-autocomplete {
+        width: 260px;}
+    
+    #edit-email-address-1-wrapper.form-item {
+        margin-right: 15px;}
+    
+    #popup-preview-form input#edit-submit-1 {
+        background: transparent url(images/send-bttn.jpg) no-repeat 0 0;
+        width: 49px;
+        height: 26px;
+        padding-top: 26px;
+        border: 0 none;
+        cursor: pointer;}
+        
+#mailshot-send-preview .admin-rounded-box-content {
+    height: 140px; /* give box a height as floating the fields loses its height aspect */}
+    
+    #mailshot-send-preview .admin-rounded-box-content .form-item label {
+        margin-top: 10px; /* primarily used to give space between the preview options label but this also effects the other labels */}
+	
+	
+
+    
+/* reporting page */
+#mailshot-report-overview {
+    background: #fafafa;
+    border: 1px solid #dcdcdc;
+    -moz-border-radius: 5px; /* required for rounded corners in FF */
+    border-radius: 5px;
+    padding: 10px 10px 0;
+    margin: 10px 0;}
+    
+    #mailshot-report-overview p {
+        font-size: 0.8em;
+        margin: 0;}
+   
+#pw_mailshots-summary-view-inner {
+    margin: 10px 0 5px;}
+
+.mailshots-report-item {
+    margin: 5px 0;
+    float: left;
+    width: 48%;}
+    
+    .mailshots-report-item span {
+       vertical-align:text-bottom;}
+   
+    .mailshots-report-item .coloured-box {
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 1.2em;
+        padding: 2px 5px;
+        float: left;
+        text-align: center;
+        min-width:65px;
+        margin-right: 8px;
+        -moz-border-radius: 2px; /* required for rounded corners in FF */
+        border-radius: 2px;}
+        
+        .mailshots-report-item.success .coloured-box {
+            background: #239d01;}  
+            
+        .mailshots-report-item.opened .coloured-box {
+            background: #0073ca;}
+        
+        .mailshots-report-item.delivered .coloured-box {
+            background: #7BDB1B;}  
+            
+        .mailshots-report-item.deferred .coloured-box {
+            background: #FF6060;}
+            
+        .mailshots-report-item.clicks .coloured-box {
+            background: #ff701f;}
+            
+        .mailshots-report-item.fail .coloured-box {
+            background: #ff0000;}
+            
+        .mailshots-report-item.unopened .coloured-box {
+            background: #24cbe5;}
+            
+        .mailshots-report-item.unsubscribe .coloured-box {
+            background: #946e52;}
+    
+.mailshots-report-item span.text {
+    font-weight: bold;
+    font-size: 1.1em;}
+    
+.mailshots-report-item span.percent {
+    font-size: 0.8em;}
+
+table#mailshot-templates .default-template a {
+  color: grey;
+  padding: 0 5px;
+}
+
+table#mailshot-templates .visible-template a {
+  color: green;
+  padding: 0 5px;
+}
+
+table#mailshot-templates .hidden-template a {
+  color: red;
+  padding: 0 5px;
+}

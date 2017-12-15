@@ -1,0 +1,57 @@
+// $Id$
+
+/**
+ * Hide blocks in sidebars, then make them visible at the click of a button.
+ */
+if (Drupal.jsEnabled) {
+	$(document).ready(function() {
+		var theButton = $('.admin-menu-toggle');
+		theButton.addClass('expand')
+		
+		mainCol = $('.wrapper .main-col-container .main-col')
+		
+		breadcrumb = $('.wrapper .main-col-container #breadcrumbs')
+		
+		var blocks = $('body #admin-menu-container, body #admin-menu-container .admin-menu-bottom span, body #admin-menu-container .admin-menu-bottom');
+		var cookie_options = { path: '/' };
+		theButton.click(function() {
+			if (theButton.hasClass('expand')) {
+				activeMenu = $('li.active-trail ul:gt(0)', blocks);
+				activeMenu.hide();
+				blocks.animate({ width: "37px" }, 250);
+				theButton.removeClass('expand');
+				theButton.addClass('collapse');
+				mainCol.animate({ marginLeft: "57px" }, 250);
+				breadcrumb.animate({ marginLeft: "57px" }, 250);
+				$.cookie('toggle-menu', 'small', cookie_options);
+			
+			} else if (theButton.hasClass('collapse')){
+				activeMenu = $('li.active-trail ul:gt(0)', blocks);
+				activeMenu.show();
+				blocks.animate({ width: "195px" }, 250);
+				theButton.removeClass('collapse');
+				theButton.addClass('expand');
+				mainCol.animate({ marginLeft: "215px" }, 250);
+				breadcrumb.animate({ marginLeft: "215px" }, 250);
+				$.cookie('toggle-menu', 'big', cookie_options);
+			}
+		});
+		
+		// cookie time!
+    // creates a variable with the contents of the cookie toggle-menu
+    var adminmenu = $.cookie('toggle-menu');
+    //alert(adminmenu);
+    // if cookie says the menu is small, make it collapsed without animation!
+    if (adminmenu == 'small') {     
+      activeMenu = $('li.active-trail ul:gt(0)', blocks);
+      activeMenu.hide();
+      blocks.css({ width: "37px" });
+      theButton.removeClass('expand');
+      theButton.addClass('collapse');
+      mainCol.css({ marginLeft: "57px" });
+      breadcrumb.css({ marginLeft: "57px" });
+
+    };
+		
+	});
+}

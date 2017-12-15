@@ -1,0 +1,44 @@
+/*
+ * Main calculators page.
+ */
+#pw-calculators fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.calculator-result {
+  margin: 10px 0;
+}
+
+.calculator-results table caption {
+  font-weight: bold;
+}
+
+#pw-calculators fieldset legend {
+  font-weight: bold;
+  padding: 0;
+}
+
+#pw-calculators input.form-text {
+  width: 200px;
+}
+
+#pw-calculators .form-item .description {
+  background: transparent url(images/bg-calculators-description.gif) no-repeat 0 0;
+  display: inline;
+  padding: 3px 0 3px 22px;
+}
+
+/*
+ * Calculator submit buttons fieldset.
+ */
+.ahah-progress,
+.progress-disabled {
+  display: inline; /* then get the throbbler to display inline and not overneath the buttons */
+  float: none; /* override system.css/default.css style */
+}
+
+.pw_calculator .table-responsive > .table > tbody > tr > td {
+  white-space: pre-wrap;
+}

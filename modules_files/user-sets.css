@@ -1,0 +1,389 @@
+/*
+= User Sets Module
+
+= browse table
+= layout - new set
+= Find users by criteria
+= Available users
+= Active set
+= Pager
+= Controls
+= Controls buttons
+*/
+
+/*
+= browse table
+--------------
+*/
+.page-count-select {
+    font-size: 0.8em;
+    background: url(images/side-col-li-li-bullet.gif) no-repeat 0 0.7em;
+    padding-left: 7px;}
+    
+    .page-count-select span {
+        font-weight: bold;
+        padding: 0 3px;}
+    
+    .page-count-select a {
+        color: #686868;
+        padding: 0 3px;}    
+        
+    /* clone icon */
+table td.clone a {
+    text-indent: -9999px;
+    display: block;
+    background: url(images/icon-clone.png) no-repeat center top;
+    height: 18px;}
+    
+    table td.clone a:hover {
+        cursor: pointer;
+        background-position: center -18px;}
+        
+    /* delete icon */
+table td.delete a {
+    text-indent: -9999px;
+    display: block;
+    background: url(images/icon-table-delete.png) no-repeat center top;
+    height: 19px;}
+    
+    table td.delete a:hover {
+        cursor: pointer;
+        background-position: center -1px;}
+        
+    /* cannot delete icon */
+table td.delete a.cannot-delete {
+    text-indent: -9999px;
+    display: block;
+    background: url(images/icon-table-cannot-delete.png) no-repeat center top;
+    height: 19px;}
+    
+    table td.delete a.cannot-delete:hover {
+        cursor: default;}
+
+/*
+layout - new set
+----------------
+*/
+form.user-sets-admin-form #col-left {
+    width: 278px;}
+
+form.user-sets-admin-form #col-middle,
+form.user-sets-admin-form #col-right {
+    width: 300px;
+    margin-left:10px;}
+
+#user-sets-members,
+#user-sets-avaliable {
+    width: auto; /* override width set in the module css */}
+  
+/*
+Find users by criteria
+----------------------
+*/ 
+#user-sets-controls-form {
+    padding: 0 10px;}
+    
+    #edit-controls-form-filtered-0-wrapper,
+    #edit-controls-form-filtered-0-1-wrapper,
+    #edit-controls-form-filtered-1-wrapper,
+    #edit-controls-form-filtered-1-1-wrapper  {
+        display: inline; /* used to pop radio bttns next to eachother in the filter box */}
+        
+    .aside #user-sets-controls-form fieldset {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;}
+    
+        .aside.width-278 div.fieldset-wrapper select {
+            width:253px;}
+    
+        #user-sets-controls-form fieldset legend {
+            color: #f55900;
+            font-weight: bold;
+            font-size: 0.9em;}
+            
+            #user-sets-controls-form fieldset legend.collapse-processed {
+                font-size: 1em;}
+    
+        .aside.width-278 fieldset input.form-text,
+        #user-sets-controls-form fieldset input.form-text {
+            width: 247px;}
+         
+.description {
+    font-size: 0.9em;}
+    
+/*
+Available users
+---------------
+*/
+#user-sets-avaliable {
+    margin: 0;}
+
+/* ie7 fixes */
+#user-sets-avaliable .admin-rounded-box-top,
+#user-sets-members .admin-rounded-box-top {
+    width: 300px;}
+    
+    #user-sets-avaliable .admin-rounded-box-top span,
+    #user-sets-members .admin-rounded-box-top span {
+        width: 300px;}
+
+/*
+#user-sets-avaliable .admin-rounded-box-content,
+#user-sets-members .admin-rounded-box-content {
+    width:298px;}*/
+           
+#user-sets-avaliable .admin-rounded-box-bottom span,
+#user-sets-members .admin-rounded-box-bottom span,
+#user-sets-avaliable .admin-rounded-box-grey-bottom span,
+#user-sets-members .admin-rounded-box-grey-bottom span {
+    width: 300px;}
+    
+#user-sets-avaliable-items,
+#user-sets-members-users-items,   
+#user-sets-members-searches-items {
+    width:278px; /* ie7 fix when no or yes is selected and jquery actions 
+                    - this must equal the width of the box the user items are in
+                    - taking into consideration padding */}
+/* end: ie7 fixes */
+
+#user-sets-avaliable-items,
+#user-sets-members-users-items {
+    padding: 0 10px;}
+    
+    #user-sets-avaliable-items label.user-set-popup,
+    #user-sets-members label.user-set-popup,
+    div.user-sets-items label.option {
+        border: 1px dotted #e2e2e2;}
+            
+label.user-set-popup:hover {
+    cursor: pointer;}
+   
+   /* style for when there are no users or live sets to add into the active set */ 
+p.user-sets-empty-message {
+    font-weight: bold;
+    font-size: 0.9em;
+    background: url(images/bullet.gif) no-repeat 0 0.3em;
+    padding-left: 13px;
+    margin:5px 0;}  
+    
+/*
+Active set
+----------
+*/  
+#user-sets-members-searches-items {
+    border-bottom: 1px solid #dddddd;
+    margin: 0 10px;}
+      
+#user-sets-members-searches-items .ui-selectee,
+#user-sets-avaliable-searches-items .ui-selectee {
+    background: none;}
+    
+    #user-sets-members-searches-items .ui-selected,
+    #user-sets-avaliable-searches-items .ui-selected {
+        background: #DDDDDD;}
+        
+    #user-sets-mode-toggle {
+        background:transparent url(images/tabs-bg-tile.gif) repeat-x scroll 0 0;
+        color:#686868;
+        display:inline-block;
+        height:27px;
+        margin: 10px 10px 0;
+        padding:0 0 0 10px;
+        width:auto;}    
+    
+    #user-sets-mode-toggle input {
+        border: 0;
+        background: none;
+        font-size: 0.9em;
+        color: #686868;
+        float: left;
+        letter-spacing:1px;
+        padding:4px 2px 0;}
+        
+        #user-sets-mode-toggle span.active input {
+            background:#FAFAFA url(images/tabs-active-point.gif) no-repeat scroll center bottom;
+            font-weight:bold;
+            color: #686868;
+            display:block;
+            height:27px;
+            padding:3px 2px 7px;
+            text-decoration:none;}
+            
+    #user-sets-avaliable-pager-per-page,
+    #user-sets-members-users-pager-per-page {        
+        font-size: 0.9em;
+        padding: 0 10px;
+        margin: 10px 0;}
+        
+        #user-sets-avaliable-pager-per-page input,
+        #user-sets-members-users-pager-per-page input {
+            border: 0 none;
+            background: none;
+            text-decoration: underline;
+            color: #686868;
+            font-size: 0.9em;
+            letter-spacing: 0.5px;
+            padding: 0;}
+        
+/*
+Pager
+-----
+*/
+.user-sets-pager {
+    border-top: 1px solid #dddddd;
+    background: #f4f4f4 url(images/bg-controls-divider.gif) no-repeat bottom center;
+    height: 18px;
+    width: 268px; /* required for ie7 */
+    padding: 5px 15px 8px;}
+    
+    span.user-sets-pager-count {
+        float: left; /* required for FF */
+        font-size:0.9em;
+        font-weight:bold;
+        margin-right:10px;}
+    
+/*
+Controls
+--------
+*/
+.user-controls {
+    background: #f4f4f4;
+    border-top:0 none;
+    border-bottom:1px solid #dddddd;
+    margin-bottom: 10px;
+    padding-bottom:10px;
+    margin-top: 10px; /* if only a live set in active group stops border touching the controls */}
+    
+    .user-bttn-heading {
+        display: inline;
+        padding-left:10px;
+        font-size: 0.9em;}
+ 
+.user-sets-controls {       
+    padding:0 10px;
+    width:278px; /* required for ie7 */}
+    
+#user-sets-avaliable-controls {
+    padding: 0;
+    width: 100%; /* required for ie7 */}
+
+#user-sets-avaliable-controls,
+#user-sets-members-users-controls {
+    border-top: 0 none;
+    background: #f4f4f4;}
+    
+#user-sets-controls-controls {
+    border-top: 0 none;}
+    
+#user-sets-members-users-controls {
+    display: inline;
+    float: left;}
+    
+#user-sets-avaliable-controls span,
+#user-sets-members-users-controls span {
+     font-weight: bold;
+     font-size:0.9em;
+     margin-right: 10px;}
+     
+        .add,
+        .selection,
+        .remove {
+            background: #f4f4f4 url(images/bg-controls-divider.gif) no-repeat bottom center;
+            padding: 5px 15px 8px;}
+            
+            
+            #user-sets-members-users-controls .remove,
+            #user-sets-members-users-controls .selection {
+                padding:5px 5px 8px;}
+            
+            .selection {
+                background: none; /* as it is the last in the control panel */}
+   
+    /* used to hide the live sets styles unless any are being displayed */             
+#user-sets-members-searches-items.user-sets-empty,
+#user-sets-members-users-items.user-sets-empty {
+    display: none;}
+ 
+    /* used to drop down the opacity when critera is disabled - works in FF & IE8 */
+#user-sets-controls-form.user-sets-disabled {   
+    opacity: .50;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;}
+                
+
+#user-sets-members h3.h3-top-border {
+    float: left;
+    width: 288px;
+    padding-top:10px;
+    border-top: 1px solid #DDDDDD;}
+    
+/*
+= Controls buttons
+------------------
+*/
+input#edit-avaliable-pager-first-1,
+input#edit-members-users-pager-first,
+input#edit-members-users-pager-first-1,
+input#edit-avaliable-pager-first,
+input#edit-avaliable-pager-prev,
+input#edit-avaliable-pager-prev-1,
+input#edit-members-users-pager-prev,
+input#edit-members-users-pager-prev-1,
+input#edit-avaliable-pager-next,
+input#edit-avaliable-pager-next-1,
+input#edit-members-users-pager-next,
+input#edit-members-users-pager-next-1,
+input#edit-avaliable-pager-last,
+input#edit-avaliable-pager-last-1,
+input#edit-members-users-pager-last,
+input#edit-members-users-pager-last-1 {
+    width: 16px;
+    height: 16px;
+    border: 0 none;
+    padding: 16px 0 0;
+    float: left; /* required to place next to span */
+    margin-top:2px; /* used to align with the span */}   
+    
+input#edit-avaliable-pager-first-1,
+input#edit-members-users-pager-first,
+input#edit-members-users-pager-first-1,
+input#edit-avaliable-pager-first {
+    background: transparent url(images/pager-first.gif) no-repeat;}
+    
+input#edit-avaliable-pager-prev-1,
+input#edit-avaliable-pager-prev,
+input#edit-members-users-pager-prev,
+input#edit-members-users-pager-prev-1 {
+    background: transparent url(images/pager-prev.gif) no-repeat;}
+    
+input#edit-avaliable-pager-next,
+input#edit-avaliable-pager-next-1,
+input#edit-members-users-pager-next,
+input#edit-members-users-pager-next-1 {
+    background: transparent url(images/pager-next.gif) no-repeat;}
+    
+input#edit-avaliable-pager-last,
+input#edit-avaliable-pager-last-1,
+input#edit-members-users-pager-last,
+input#edit-members-users-pager-last-1 {
+    background: transparent url(images/pager-last.gif) no-repeat;}
+    
+    input#edit-avaliable-pager-first-1:hover,
+    input#edit-members-users-pager-first:hover,
+    input#edit-members-users-pager-first-1:hover,
+    input#edit-avaliable-pager-first:hover,
+    input#edit-avaliable-pager-prev:hover,
+    input#edit-avaliable-pager-prev-1:hover,
+    input#edit-members-users-pager-prev:hover,
+    input#edit-members-users-pager-prev-1:hover,
+    input#edit-avaliable-pager-next:hover,
+    input#edit-avaliable-pager-next-1:hover,
+    input#edit-members-users-pager-next:hover,
+    input#edit-members-users-pager-next-1:hover,
+    input#edit-avaliable-pager-last:hover,
+    input#edit-avaliable-pager-last-1:hover,
+    input#edit-members-users-pager-last:hover,
+    input#edit-members-users-pager-last-1:hover {
+        background-position: 0 -16px;}

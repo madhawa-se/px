@@ -1,0 +1,35 @@
+/*=Basic styling*/
+
+.profile-listing {
+  float:left;
+  width:100%;}
+
+.profile-image,
+.profile-info,
+.views-field-image-url {
+  float: left;}
+  
+.profile-image,
+.views-field-image-url {
+  margin: 0 1em 1em 0;}
+  
+#profile-body {
+  clear: both;}
+  
+.item-list ul.staff-expertise-terms-list {
+  margin: 0em 2em;
+  }
+  
+.item-list ul.staff-expertise-terms-list li {
+  margin: 0em 0px 0.5em 0em;
+  padding: 0px;
+  width: 25%;
+  float: left;
+  display: block;
+  }
+  
+.item-list ul.staff-expertise-terms-list li span {
+  display: block;
+  margin: 0px 1em 0px 1em;
+  padding: 0px;
+  }

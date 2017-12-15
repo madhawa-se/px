@@ -1,0 +1,124 @@
+/*
+= Page View
+-----------
+*/
+.dates-and-deadlines-item {
+  border-bottom: 1px dotted #DDDDDD;
+  padding:0 0 10px 0;
+  margin: 10px 0;  
+  min-height:65px;}
+
+.deadline-date-container {
+  background: transparent url(images/calendar_item_bg.gif) no-repeat 0 0;
+  text-align:center;
+  width:44px;
+  height:56px;
+  float: left;}
+  
+  .deadline-month,
+  .deadline-date,
+  .deadline-year {
+    margin-left: 4px;
+    width: 34px;
+    line-height:15px;
+    font-family:Tahoma,Geneva,sans-serif;}  
+  
+  .deadline-month {
+    font-size: 10px;
+    margin-top: 8px;
+    background: #0C5DB9;
+    color:white;}
+    
+    .deadline-past .deadline-month {
+      background: #D40000;}
+      
+    .deadline-today .deadline-month {
+      background: #4cbb32;}
+    
+    /* alternative month colours between red:#D40000 and blue:#0C5DB9
+    .deadline-month-01,
+    .deadline-month-03,
+    .deadline-month-05,
+    .deadline-month-07,
+    .deadline-month-09,
+    .deadline-month-11 {
+      background: #0C5DB9; }
+    */
+   
+  .deadline-date {
+    font-size:13px;
+    font-weight:bold;}
+    
+  .deadline-year {
+    font-size: 10px;
+    color:#D69854;}
+    
+.deadline-container {
+  margin-left:55px;}
+  
+  p.deadline-date-today,
+  p.deadline-date-past {
+    margin: 0;
+    font-weight: bold;
+    padding-left:20px;}
+  
+  p.deadline-date-today {
+    background: url(images/exclamation_green.gif) no-repeat 0 0.2em;
+    color: green;}
+    
+  p.deadline-date-past {
+    background: url(images/exclamation.gif) no-repeat 0 0.2em;
+    color: red;}
+  
+  .item-list .deadline-container ul li {
+    margin: 0 0 5px 0}
+      
+  .deadline-container .views-field-title,
+  .deadline-block-container .views-field-title {
+    font-weight: bold;}
+    
+  .deadline-container .views-field-body p,
+  .deadline-block-container  .views-field-body p {
+    margin: 0;}
+    
+/*
+= Expired Block View
+--------------------
+*/
+.block .dates-and-deadlines-item {
+  min-height:36px;}
+
+.deadline-date-block-container {
+  /*background: transparent url(images/little_calendar_item_bg.gif) no-repeat 0 0;*/
+  border: 1px solid #E5E5E5;
+  text-align:center;
+  width:34px;
+  float: left;}
+
+  .deadline-date-block-container .deadline-month,
+  .deadline-date-block-container .deadline-date {
+    margin: 0;}
+    
+  .deadline-date-block-container .deadline-date {
+    margin-bottom: 3px;}
+    
+.deadline-block-container {
+  margin-left: 40px;}
+
+/* Exposed filters on page view (page_1) */
+form#views-exposed-form-dates-and-deadlines-page-1 #category,
+form#views-exposed-form-dates-and-deadlines-page-1 #period-and-buttons {
+  float: left;  
+}
+
+form#views-exposed-form-dates-and-deadlines-page-1 #period-and-buttons {
+  padding-left: 50px;
+}
+
+form#views-exposed-form-dates-and-deadlines-page-1 .form-item {
+  margin-top: 0;
+}
+
+form#views-exposed-form-dates-and-deadlines-page-1 .label {
+  font-weight: bold;  
+}
